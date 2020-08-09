@@ -1,4 +1,4 @@
-/* @import url(//db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The + Historia + Demo); */
+@import url(//db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The + Historia + Demo);
 
 *,
 *::before,
@@ -573,18 +573,18 @@ input[type="submit"]:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body {
     background: url("luca-bravo-9l_326FISzk-unsplash.jpg") no-repeat center
       fixed;
     background-size: cover;
   }
   .name-text h1 {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 
   .nametext h4 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .navlist {
