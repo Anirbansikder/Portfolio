@@ -1,0 +1,699 @@
+/* @import url(//db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The + Historia + Demo); */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  color: lightgray;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: url("luca-bravo-9l_326FISzk-unsplash.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(255, 123, 123, 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+}
+
+.top-nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #16162d;
+  top: -100vh;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  transition: all 650ms cubic-bezier(1, 0, 0, 1);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+}
+
+.navlist {
+  list-style: none;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  margin: 1rem;
+}
+
+.navlink {
+  font-family: "The Historia Demo", sans-serif;
+  font-size: 5rem;
+  padding: 0.5rem;
+}
+
+.navlink:hover,
+.navlink:focus {
+  background: linear-gradient(to top, yellow, red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 5;
+}
+
+.top-nav.open {
+  top: 0;
+  border-radius: initial;
+}
+
+.menu-btn {
+  float: right;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: 2.5px solid rgb(233, 22, 22);
+  margin-right: 25px;
+  margin-top: 25px;
+  z-index: 25;
+}
+
+.menu-btn__burger {
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(45deg, red, yellow);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(45deg, red, yellow);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+  z-index: 25;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(8px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.name-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 15;
+}
+
+.name-text h1 {
+  font-size: 15rem;
+  font-family: "The Historia Demo", sans-serif;
+  letter-spacing: 10px;
+  background: linear-gradient(to top, rgb(246, 246, 5), rgb(255, 53, 53));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.name-text h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 5px;
+}
+
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  height: 100%;
+  width: 100%;
+}
+
+.aboutheading {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.aboutheading h1 {
+  font-size: 6rem;
+  opacity: 0.8;
+  background: linear-gradient(to top, rgb(246, 5, 226), rgb(239, 255, 17));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .profileimg {
+  overflow: hidden;
+  border-radius: 100%;
+  margin-left: 5%;
+} */
+
+.aboutdetails {
+  flex: 1;
+}
+
+.aboutdetails P {
+  margin-left: 5%;
+}
+
+.social-media {
+  /* position: static; */
+  margin-top: 1rem;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index: -1; */
+}
+
+.social-media i {
+  font-size: 3.5rem;
+  transition: color 650ms;
+}
+
+.fa-facebook-square:hover,
+.fa-linkedin:hover {
+  color: rgb(57, 57, 255);
+}
+
+.fa-instagram-square:hover {
+  color: rgb(255, 140, 159);
+}
+
+.container {
+  width: 80%;
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-heading {
+  text-align: center;
+  color: lightgray;
+  margin-top: 10rem;
+}
+
+.section-heading h1 {
+  font-size: 6rem;
+  /* color: rgba(255, 255, 255, 0.3); */
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 1rem;
+  background: linear-gradient(to top, rgb(246, 246, 5), rgb(255, 53, 53));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-heading h1::before,
+.section-heading h1::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.section-heading h1::before {
+  width: 50%;
+  height: 4px;
+  border-radius: 0.8rem;
+}
+
+.section-heading h1::after {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  bottom: -2.3rem;
+}
+
+.section-heading h4 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  background: linear-gradient(to top, rgb(246, 246, 5), rgb(255, 53, 53));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.portfolio-item:last-child {
+  margin-bottom: 0;
+}
+
+.profileimg {
+  background: url(44390071_1618209844992365_242514563864461312_o.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+  width: 300px;
+  height: 300px;
+}
+
+.portfolio-description {
+  flex: 1;
+}
+
+.portfolio-description p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.profile-img {
+  background: url(ian-schneider-TamMbr4okv4-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  border-radius: 70px;
+  width: 150px;
+  height: 150px;
+  float: right;
+}
+
+.my-skills {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2.5rem;
+  text-align: center;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.skill h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 2rem -2px 2rem 0;
+}
+
+.icon-container {
+  width: 10rem;
+  height: 10rem;
+  border: 3px solid #ffe838;
+  background-color: #fd57bf;
+  margin-bottom: 2rem;
+  display: flex;
+  transform: rotate(45deg);
+}
+
+.icon-container i {
+  color: yellow;
+  font-size: 5rem;
+  margin: auto;
+  transform: rotate(-45deg);
+}
+
+.timeline ul {
+  border-left: 4px solid yellow;
+  border-radius: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  position: relative;
+  padding: 5rem;
+  list-style: none;
+  text-align: left;
+  width: 70%;
+  z-index: 0;
+}
+
+.timeline h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.timeline .date {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.timeline .date:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline .date::before,
+.timeline .date::after {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline .date::before {
+  content: attr(data-date);
+  left: -20rem;
+  text-align: right;
+  min-width: 12rem;
+  font-size: 1.5rem;
+}
+
+.timeline .date::after {
+  content: "";
+  box-shadow: 0 0 0 4px #fd57bf;
+  border-radius: 100%;
+  left: -7rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #313534;
+}
+
+.contact {
+  background-color: rgba(255, 123, 123, 0.3);
+  margin: 50px 80px;
+  padding-bottom: 50px;
+}
+
+form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.contact .section-heading h1 {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+}
+
+.contact .section-heading h4 {
+  color: rgba(0, 0, 0, 0.7);
+}
+form label {
+  font-size: 1.5rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 5px;
+  border: none;
+  outline-color: black;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  background-color: rgb(206, 201, 201);
+}
+
+input[type="reset"] {
+  width: initial;
+  background-color: rgb(182, 180, 180);
+  color: #eee;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color 650ms;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+input[type="reset"]:hover {
+  color: black;
+  font-weight: 600;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="submit"] {
+  width: initial;
+  background-color: rgb(182, 180, 180);
+  color: #eee;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color 650ms;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+  color: black;
+  font-weight: 600;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(97, 34, 34, 0.507);
+  padding: 2rem 0;
+  position: relative;
+}
+
+.up {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #eee;
+  top: -2.5rem;
+  right: 5rem;
+  display: flex;
+  animation: pulse 2s infinite;
+  cursor: pointer;
+}
+
+.up i {
+  color: #16162d;
+  font-size: 2rem;
+  margin: auto;
+}
+
+.copyright p {
+  font-size: 1.3rem;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(235, 87, 191, 0.99);
+  }
+  70% {
+    box-shadow: 0 0 0 2rem rgba(235, 87, 191, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(235, 87, 191, 0.99);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: url("luca-bravo-9l_326FISzk-unsplash.jpg") no-repeat center
+      fixed;
+    background-size: cover;
+  }
+  .name-text h1 {
+    font-size: 10rem;
+  }
+
+  .nametext h4 {
+    font-size: 4rem;
+  }
+
+  .navlist {
+    flex-direction: column;
+  }
+
+  li {
+    margin: 2rem 0;
+  }
+
+  .navlink {
+    font-size: 4.5rem;
+  }
+
+  .aboutheading h1 {
+    font-size: 8rem;
+  }
+
+  .aboutdetails P {
+    margin: 0;
+  }
+
+  .section-heading h1 {
+    font-size: 4rem;
+  }
+
+  .section-heading h4 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .aboutdetails .navlist {
+    flex-direction: initial;
+  }
+
+  .aboutdetails li {
+    margin: 1rem;
+  }
+
+  .icon-container {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .icon-container i {
+    font-size: 4rem;
+  }
+
+  .timeline ul {
+    margin: 0 0 0 auto;
+  }
+
+  .timeline .date::before {
+    left: -20rem;
+  }
+
+  .timeline .date::after {
+    left: -6rem;
+  }
+
+  .profileimg {
+    width: 200px;
+    height: 200px;
+    margin: 0 0 3rem 0;
+  }
+
+  .contact {
+    margin: 0 10px;
+    padding-bottom: 30px;
+  }
+  form {
+    width: 100%;
+  }
+
+  .about .container {
+    flex-direction: column;
+  }
+  .up {
+    right: 2.5rem;
+  }
+}
+
+.cp {
+  font-size: 70px;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 800;
+  text-shadow: 2px 2px 5px black;
+}
+
+.iconify:hover {
+  color: yellow;
+}
+
+.git {
+  font-size: 25px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.git .iconify {
+  font-size: 70px;
+  color: grey;
+  margin-left: 20px;
+}
+
+.git .iconify:hover {
+  color: green;
+  cursor: pointer;
+}
