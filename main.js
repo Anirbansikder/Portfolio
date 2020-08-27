@@ -30,9 +30,9 @@ menuBtn2.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
 
-const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 300,
-});
+// const scroll = new SmoothScroll('a[href*="#"]', {
+//   speed: 300,
+// });
 
 // $(document).ready(function () {
 //   $(".menu-toggler").on("click", function () {
